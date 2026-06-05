@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 260" width="200" height="260">
+  <defs>
+    <linearGradient id="wavyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#6b3a2a"/>
+      <stop offset="50%" style="stop-color:#8b5040"/>
+      <stop offset="100%" style="stop-color:#4a2518"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="100" cy="50" rx="95" ry="55" fill="url(#wavyGrad)"/>
+  <path d="M20,65 Q10,100 25,130 Q15,160 30,190 Q20,220 35,250 Q100,265 165,250 Q180,220 170,190 Q185,160 175,130 Q190,100 180,65 Z" fill="url(#wavyGrad)"/>
+  <path d="M40,80 Q30,110 45,140 Q35,170 50,200" stroke="#5a3020" stroke-width="3" fill="none" opacity="0.4"/>
+  <path d="M160,80 Q170,110 155,140 Q165,170 150,200" stroke="#5a3020" stroke-width="3" fill="none" opacity="0.4"/>
+</svg>

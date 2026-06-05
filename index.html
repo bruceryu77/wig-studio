@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#1a1a2e">
+  <title>WIG Studio - 가발 가상 착용</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <!-- 시작 화면 -->
+    <section id="start-screen" class="screen active">
+      <div class="start-content">
+        <div class="logo">
+          <span class="logo-icon">💇</span>
+          <h1>WIG Studio</h1>
+          <p class="subtitle">가발 가상 착용 체험</p>
+        </div>
+        <p class="description">
+          카메라로 얼굴을 촬영하고<br>
+          다양한 가발을 직접 써보세요!
+        </p>
+        <button id="btn-start" class="btn-primary">
+          <span>📷</span> 시작하기
+        </button>
+      </div>
+    </section>
+
+    <!-- 카메라 화면 -->
+    <section id="camera-screen" class="screen">
+      <div class="camera-header">
+        <button id="btn-back" class="btn-icon" aria-label="뒤로">←</button>
+        <h2>얼굴 촬영</h2>
+        <button id="btn-switch-camera" class="btn-icon" aria-label="카메라 전환">🔄</button>
+      </div>
+
+      <div class="camera-container">
+        <video id="video" autoplay playsinline muted></video>
+        <canvas id="overlay-canvas"></canvas>
+        <div id="face-guide" class="face-guide">
+          <div class="guide-oval"></div>
+          <p>얼굴을 가이드 안에 맞춰주세요</p>
+        </div>
+      </div>
+
+      <div class="camera-controls">
+        <button id="btn-capture" class="btn-capture" aria-label="촬영">
+          <span class="capture-ring"></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 가발 선택 화면 -->
+    <section id="wig-screen" class="screen">
+      <div class="wig-header">
+        <button id="btn-retake" class="btn-icon" aria-label="다시 촬영">←</button>
+        <h2>가발 선택</h2>
+        <button id="btn-save" class="btn-icon" aria-label="저장">💾</button>
+      </div>
+
+      <div class="preview-container">
+        <canvas id="result-canvas"></canvas>
+        <div id="loading" class="loading hidden">
+          <div class="spinner"></div>
+          <p>얼굴 인식 중...</p>
+        </div>
+      </div>
+
+      <div class="wig-controls">
+        <div class="adjust-controls">
+          <label>
+            <span>크기</span>
+            <input type="range" id="scale-slider" min="0.5" max="2" step="0.05" value="1">
+          </label>
+          <label>
+            <span>위치</span>
+            <input type="range" id="offset-slider" min="-50" max="50" step="1" value="0">
+          </label>
+        </div>
+
+        <div class="wig-gallery">
+          <button class="wig-item active" data-wig="none">
+            <div class="wig-thumb none-thumb">없음</div>
+            <span>원본</span>
+          </button>
+          <button class="wig-item" data-wig="short-bob">
+            <img src="assets/wigs/short-bob.svg" alt="숏 밥" class="wig-thumb">
+            <span>숏 밥</span>
+          </button>
+          <button class="wig-item" data-wig="long-straight">
+            <img src="assets/wigs/long-straight.svg" alt="긴 생머리" class="wig-thumb">
+            <span>긴 생머리</span>
+          </button>
+          <button class="wig-item" data-wig="wavy">
+            <img src="assets/wigs/wavy.svg" alt="웨이브" class="wig-thumb">
+            <span>웨이브</span>
+          </button>
+          <button class="wig-item" data-wig="curly">
+            <img src="assets/wigs/curly.svg" alt="컬" class="wig-thumb">
+            <span>컬</span>
+          </button>
+          <button class="wig-item" data-wig="ponytail">
+            <img src="assets/wigs/ponytail.svg" alt="포니테일" class="wig-thumb">
+            <span>포니테일</span>
+          </button>
+          <button class="wig-item" data-wig="pixie">
+            <img src="assets/wigs/pixie.svg" alt="픽시컷" class="wig-thumb">
+            <span>픽시컷</span>
+          </button>
+          <button class="wig-item" data-wig="bangs">
+            <img src="assets/wigs/bangs.svg" alt="앞머리" class="wig-thumb">
+            <span>앞머리</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

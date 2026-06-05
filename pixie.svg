@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 140" width="200" height="140">
+  <defs>
+    <linearGradient id="pixieGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#c0a060"/>
+      <stop offset="50%" style="stop-color:#d4b878"/>
+      <stop offset="100%" style="stop-color:#a08850"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="100" cy="50" rx="90" ry="50" fill="url(#pixieGrad)"/>
+  <path d="M15,60 Q10,90 20,110 Q50,125 100,125 Q150,125 180,110 Q190,90 185,60" fill="url(#pixieGrad)"/>
+  <path d="M30,55 Q50,30 70,45 Q85,25 100,40 Q115,25 130,45 Q150,30 170,55" fill="#d4b878" opacity="0.5"/>
+  <path d="M60,50 L55,35 M100,42 L100,25 M140,50 L145,35" stroke="#b09860" stroke-width="3" stroke-linecap="round"/>
+</svg>

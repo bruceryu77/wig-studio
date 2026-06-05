@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 180" width="200" height="180">
+  <defs>
+    <linearGradient id="bobGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3d2314"/>
+      <stop offset="50%" style="stop-color:#5c3a1e"/>
+      <stop offset="100%" style="stop-color:#2a1810"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="100" cy="55" rx="95" ry="60" fill="url(#bobGrad)"/>
+  <path d="M10,70 Q5,120 20,160 Q50,175 100,175 Q150,175 180,160 Q195,120 190,70" fill="url(#bobGrad)"/>
+  <ellipse cx="100" cy="55" rx="70" ry="35" fill="#4a2e18" opacity="0.3"/>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="bangsGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#0d0d1a"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="100" cy="45" rx="95" ry="50" fill="url(#bangsGrad)"/>
+  <path d="M15,55 Q10,90 20,120 Q15,140 25,160 Q50,175 100,175 Q150,175 175,160 Q185,140 180,120 Q190,90 185,55" fill="url(#bangsGrad)"/>
+  <path d="M25,55 Q35,90 50,110 Q65,95 80,115 Q90,100 100,115 Q110,100 120,115 Q135,95 150,110 Q165,90 175,55" fill="#2a2a3e" opacity="0.6"/>
+  <path d="M30,58 Q45,85 60,100 Q75,88 90,102 Q100,92 110,102 Q125,88 140,100 Q155,85 170,58" fill="none" stroke="#1a1a2e" stroke-width="1" opacity="0.3"/>
+</svg>
